@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:devel
 
 # initial idea from https://github.com/jdecool/dockerfiles/blob/master/mysql-workbench/Dockerfile
 MAINTAINER Guillem Lefait <guillem.lefait@datamq.com>
@@ -10,6 +10,10 @@ RUN apt-get update \
 		x11-apps \
 		gnome-keyring \
 		mysql-workbench \
+		dbus \
+		lsb-release \
+		gnome-themes-standard \
+		adwaita-icon-theme-full \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/*
 
